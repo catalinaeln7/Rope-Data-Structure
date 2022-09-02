@@ -1,0 +1,28 @@
+315CA - BUTILCA RARES, POPA CATALINA
+
+FUNCTII PRINCIPALE:
+
+1) concat: Se creeaza un nou arbore in care pointerii stanga si dreapta
+ai radacinii sunt nodurile date ca parametri.
+
+2) index: Cat timp nodul nu este frunza, se compara la fiecare pas indexul
+cu greutatea nodului curent. Daca indexul e mai mic continui sa iterez
+la stanga nodului, altfel continui sa iterez la dreapta, iar la final
+returnez caracterul de la index.
+
+3) search: Cu ajutorul functiei index caut toate caracterele din intervalul
+[start, end) si le adaug la stringul pe care la final il returnez.
+
+4) split: Compar la fiecare pas indexul cu greutatea nodului curent. Daca
+indexul este mai mic, continui sa iterez in subarborele stang, tai legatura
+catre subarborele drept si concatenez recursiv subarborele drept detasat cu
+cei anterior detasati (daca este cazul). Altfel, continui sa iterez in
+subarborele drept, actualizez indexul si apelez functia recursiv. Daca trebuie
+sa separ caractere din aceeasi frunza, sparg nodul in alte doua si le
+concatenez.
+
+5) insert: Ma folosesc de split sa separ arborele acolo unde trebuie sa
+inserez si concatenez la partea stanga mijlocul, iar apoi partea dreapta.
+
+6) delete: Ma folosesc de split sa separ arborele in 2 locuri - la inceputul si
+la sfarsitul substringului pe care trebuie sa il elimin.
